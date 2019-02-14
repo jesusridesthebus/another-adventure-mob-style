@@ -1,5 +1,4 @@
 import questChoices from '../quests.js';
-console.log(questChoices);
 
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -9,7 +8,6 @@ const descDisplay = document.getElementById('quest-description');
 const choiceDisplay = document.getElementById('quest-choices');
 const imageDisplay = document.getElementById('quest-image');
 const choiceForm = document.getElementById('choice-form');
-const formData = new FormData(choiceForm);
 
 for(let i = 0; i < questChoices.length; i++) {
     const currentChoice = questChoices[i];
@@ -32,8 +30,11 @@ for(let i = 0; i < questChoices.length; i++) {
     }
 }
 
-choiceForm.addEventListener('submit', function(event){
+choiceForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-
+    const formData = new FormData(choiceForm);
+    const chosenAction = formData.get('choice');
+    
+    console.log(questToFind);
 });

@@ -7,9 +7,9 @@ userForm.addEventListener('submit', function(event) {
 
     const userInfo = {
         name: formData.get('name'),
-        avatar: 0,
-        hp: 0,
-        gold: 0
+        avatar: 'banana',
+        hp: 50,
+        gold: 50
     };
 
     const serialize = JSON.stringify(userInfo);

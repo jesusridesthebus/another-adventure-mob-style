@@ -62,7 +62,7 @@ const foodChoice3 = {
     description: 'Steal meatballs from a distracted parent.',
     hp: 50,
     gold: 50,
-    value: 'foodChoice3'
+    value: 'foodChoice3 '
 };
 
 const foodChoices = [foodChoice1, foodChoice2, foodChoice3];
