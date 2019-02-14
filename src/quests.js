@@ -1,9 +1,28 @@
+const assChoice1 = {
+    description: 'Run away screaming.',
+    hp: 0,
+    gold: 0
+};
 
+const assChoice2 = {
+    description: 'Answer the DIY call of mismatched furniture parts.',
+    hp: 0,
+    gold: 0
+};
+
+const assChoice3 = {
+    description: 'Curl up for a nap on the couch with the mystery stain...',
+    hp: 0,
+    gold: 0
+};
+
+const assChoices = [assChoice1, assChoice2, assChoice3];
 
 const ass = {
     id: 'ass',
     title: 'Enter the As-Is Section',
-    description: 'You have entered the deepest, darkest corner of IKEA... The As-Is section. You are overwhelmed with possibilities! Do you...'
+    description: 'You have entered the deepest, darkest corner of IKEA... The As-Is section. You are overwhelmed with possibilities! Do you...',
+    choices: assChoices
 };
 
 const children = {
