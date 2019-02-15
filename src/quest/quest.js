@@ -33,6 +33,9 @@ for(let i = 0; i < questChoices.length; i++) {
     }
 }
 
+const jsonString = window.localStorage.getItem('userInfo');
+const userInfo = JSON.parse(jsonString);
+
 choiceForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -53,10 +56,10 @@ choiceForm.addEventListener('submit', function(event) {
     for(let i = 0; i < selected.length; i++) {
         const currentChoice = selected[i];
         if(chosenAction === currentChoice.value) {
-            console.log(currentChoice);
+            userInfo.hp += currentChoice.hp;
+            userInfo.gold += currentChoice.gold;
+            const serialize = JSON.stringify(userInfo);
+            window.localStorage.setItem('userInfo', serialize);
         }
     }
-
-    
-    
 });
