@@ -1,4 +1,7 @@
 import questChoices from '../quests.js';
+import assChoices from './ass-choices.js';
+import childrenChoices from './children-choices.js';
+import foodChoices from './food-choices.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -35,6 +38,25 @@ choiceForm.addEventListener('submit', function(event) {
 
     const formData = new FormData(choiceForm);
     const chosenAction = formData.get('choice');
+
+    let selected = null;
+    if(chosenAction.includes('ass')) {
+        selected = assChoices;
+    }
+    if(chosenAction.includes('children')) {
+        selected = childrenChoices;
+    }
+    if(chosenAction.includes('food')) {
+        selected = foodChoices;
+    }
     
-    console.log(questToFind);
+    for(let i = 0; i < selected.length; i++) {
+        const currentChoice = selected[i];
+        if(chosenAction === currentChoice.value) {
+            console.log(currentChoice);
+        }
+    }
+
+    
+    
 });
