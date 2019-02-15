@@ -62,4 +62,6 @@ choiceForm.addEventListener('submit', function(event) {
             window.localStorage.setItem('userInfo', serialize);
         }
     }
+    
+    window.location = 'map.html';
 });
